@@ -1,0 +1,29 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: network_learning - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPFFC9.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /FR"Debug/" /Fp"Debug/network_learning.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ  /c 
+"D:\GitHub\miracle\network_learning\network_learning.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPFFC9.tmp" 
+<h3>Output Window</h3>
+Compiling...
+network_learning.cpp
+D:\GitHub\miracle\network_learning\network_learning.cpp(19) : warning C4101: 'iLen' : unreferenced local variable
+D:\GitHub\miracle\network_learning\network_learning.cpp(21) : warning C4101: 'iSend' : unreferenced local variable
+D:\GitHub\miracle\network_learning\network_learning.cpp(17) : warning C4101: 'sAccept' : unreferenced local variable
+D:\GitHub\miracle\network_learning\network_learning.cpp(25) : warning C4101: 'client' : unreferenced local variable
+
+
+
+<h3>Results</h3>
+network_learning.obj - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
