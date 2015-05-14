@@ -14,7 +14,7 @@ int main(int argc, char* argv[])
 {
 	int port = PORT;
 	WSADATA wsaData;
-	SOCKET sLitsen,sAccept;
+	SOCKET sListen,sAccept;
 	//客户地址长度
 	int iLen;
 	//发送数据长度
@@ -28,8 +28,8 @@ int main(int argc, char* argv[])
 		printf("Winsock load failed\n");
 		return 1;
 	}
-	sLitsen = socket(AF_INET,SOCK_STREAM,0);
-	if(sLitsen==INVALID_SOCKET)
+	sListen = socket(AF_INET,SOCK_STREAM,0);
+	if(sListen==INVALID_SOCKET)
 	{
 		printf("socket failed:%d\n",WSAGetLastError());
 		return 1;
@@ -41,5 +41,30 @@ int main(int argc, char* argv[])
 	//把四字节主机字节顺序转换为网络字节顺序，INADDR_ANY为系统指定的IP地址
 	serv.sin_addr.s_addr = htonl(INADDR_ANY);
 	
+	if(bind(sListen,(LPSOCKADDR)&serv,sizeof(serv))==SOCKET_ERROR)
+	{
+		printf("bind() failed:%d\n",WSAGetLastError());
+		return 1;
+	}
+	//进入监听
+	if(listen(sListen,5)==SOCKET_ERROR)
+	{
+		printf("listen() failed:%d\n",WSAGetLastError());
+		return 1;
+	}
+	//初始化客户地址长度
+	iLen=sizeof(client);
+	//进入循环，等待客户连接请求
+	while(1)
+	{
+		sAccept = accept(sListen,(struct sockaddr*)&client,&iLen);
+		if(sAccept == INVALID_SOCKET)
+		{
+			printf("accept() failed:%d\n",WSAGetLastError());
+			break;
+		}
+	}
+
+
 	return 0;
 }
