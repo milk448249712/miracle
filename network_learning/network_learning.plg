@@ -6,21 +6,23 @@
 --------------------Configuration: network_learning - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP6E3F.tmp" with contents
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPD1B.tmp" with contents
 [
-/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /FR"Debug/" /Fp"Debug/network_learning.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
-"D:\GITHUB\MIRACLE\network_learning\network_learning.cpp"
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/network_learning.pdb" /debug /machine:I386 /out:"Debug/network_learning.exe" /pdbtype:sept 
+.\Debug\network_learning.obj
+.\Debug\StdAfx.obj
 ]
-Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP6E3F.tmp" 
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPD1B.tmp"
 <h3>Output Window</h3>
-Compiling...
-network_learning.cpp
-D:\GITHUB\MIRACLE\network_learning\network_learning.cpp(21) : warning C4101: 'iSend' : unreferenced local variable
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/network_learning.bsc"  .\Debug\StdAfx.sbr .\Debug\network_learning.sbr"
+Creating browse info file...
+<h3>Output Window</h3>
 
 
 
 <h3>Results</h3>
-network_learning.obj - 0 error(s), 0 warning(s)
+network_learning.exe - 0 error(s), 0 warning(s)
 </pre>
 </body>
 </html>
