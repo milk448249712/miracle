@@ -1,16 +1,8 @@
 // network_learning.cpp : Defines the entry point for the console application.
 //
-
 #include "stdafx.h"
-#include <Winsock2.h>
-#include <stdio.h>
-#include <stdlib.h>
-
-#define PORT 5000
-
-#pragma comment(lib,"ws2_32.lib")
-
-int main(int argc, char* argv[])
+#include "network_serv.h"
+int network_serv(void)
 {
 	int port = PORT;
 	WSADATA wsaData;
