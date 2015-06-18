@@ -1,5 +1,5 @@
 // stdafx.cpp : source file that includes just the standard includes
-//	network_learning.pch will be the pre-compiled header
+//	MAC_address.pch will be the pre-compiled header
 //	stdafx.obj will contain the pre-compiled type information
 
 #include "stdafx.h"
